@@ -79,6 +79,8 @@ class TextViewer {
 		$textlineContainer.append(this._createImageObject(textline));
 		$textlineContainer.append($("<br>"));
 		$textlineContainer.append(this._createTextObject(textline));
+		$textlineContainer.append($("<br>"));
+		$textlineContainer.append(this._createTextObject(this._createTextObject(textline)));
 		this.container.append($textlineContainer);
 
 		this.zoomBase(textline.id);
