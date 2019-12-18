@@ -1,6 +1,16 @@
 <%@tag description="Edit Segment Window" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+<div class="card input-field page-selector">
+	<select class="change-page-selector">
+		<c:forEach items="${book.getPages()}" var="bookpage">
+			<option data-title="${book.getName()}/${bookpage.getName()}" data-page="${bookpage.getId()}"
+					data-image="${bookpage.getImages().get(0)}">${bookpage.getName()}
+			</option>
+		</c:forEach>
+	</select>
+</div>
+
 <div id="pagecontainer" class="row">
 	<div class="col s12">
 		<c:forEach items="${book.getPages()}" var="bookpage">
